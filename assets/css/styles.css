@@ -1,16 +1,19 @@
+/* Global styles */
+
 body {
-  font-family: Arial;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 120%;
+  background-color: #f4fdfd;
 }
 
 a {
-  color: #563d7c;
+  color: #1e9492;
   text-decoration: none;
   transition: color 0.1s;
 }
 
 a:hover {
-  color: #8570a5;
+  color: #27bfbc;
 }
 
 button {
@@ -18,7 +21,7 @@ button {
   margin: 5px;
   cursor: pointer;
   font-size: 100%;
-  background-color: #563d7c;
+  background-color: #1e9492;
   border-radius: 5px;
   padding: 2px 10px;
   color: white;
@@ -27,7 +30,7 @@ button {
 }
 
 button:hover {
-  background-color: #8570a5;
+  background-color: #27bfbc;
 }
 
 .choices button {
@@ -85,4 +88,10 @@ li:nth-child(odd) {
   position: absolute;
   top: 10px;
   right: 10px;
+}
+
+h1,
+p,
+.timer {
+  color: #083538;
 }
