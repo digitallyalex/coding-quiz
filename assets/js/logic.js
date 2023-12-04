@@ -1,3 +1,5 @@
+"use strict";
+
 //* A start button that when clicked a timer starts and the first question appears
 //...*Questions contain buttons for each answer
 //...*When answer is clicked, the next question appears
