@@ -110,13 +110,14 @@ function quizTimer() {
 //saving scores to local storage
 function saveScore() {
   if (playerInitials !== "") {
-    let highscores = JSON.parse(localStorage.getItem("highscores")) || [];
-    let savedScore = {
-      player: playerInitials,
+    let highscores =
+      JSON.parse(window.localStorage.getItem("highscores")) || [];
+    let savedScores = {
+      player: playerInitials.value,
       highscore: remainingTime,
     };
-    highscores.push(savedScore);
-    localStorage.setItem("highscores", JSON.stringify(highscores));
+    highscores.push(savedScores);
+    window.localStorage.setItem("highscores", JSON.stringify(highscores));
   }
 }
 
