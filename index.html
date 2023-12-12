@@ -10,10 +10,13 @@
   </head>
 
   <body>
+    <!-- highscores page link -->
     <div class="scores"><a href="highscores.html">View Highscores</a></div>
 
+    <!-- timer section -->
     <div class="timer">Time: <span id="time">0</span></div>
 
+    <!-- Start Screen -->
     <div class="wrapper">
       <div id="start-screen" class="start">
         <h1>Coding Quiz Challenge</h1>
@@ -22,14 +25,17 @@
           limit. Keep in mind that incorrect answers will penalize your
           score/time by ten seconds!
         </p>
+        <!-- button that triggers timer and displaying of quiz questions -->
         <button id="start">Start Quiz</button>
       </div>
 
+      <!-- quiz questions displayed -->
       <div id="questions" class="hide">
         <h2 id="question-title"></h2>
         <div id="choices" class="choices"></div>
       </div>
 
+      <!-- end-game screen -->
       <div id="end-screen" class="hide">
         <h2>All done!</h2>
         <p>Your final score is <span id="final-score"></span>.</p>
@@ -39,9 +45,15 @@
         </p>
       </div>
 
-      <div id="feedback" class="feedback hide"></div>
-    </div>
+      <!-- feedback to be displayed once answer choice is clicked -->
+      <div id="feedback-correct" class="feedback hide">
+        <h3>Correct answer! Keep going 💪🏻</h3>
+      </div>
 
+      <div id="feedback-wrong" class="feedback hide">
+        <h3>Oops, wrong answer! You lose 10 points ☹️</h3>
+      </div>
+    </div>
     <script src="./assets/js/questions.js"></script>
     <script src="./assets/js/logic.js"></script>
   </body>
