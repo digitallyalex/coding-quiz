@@ -27,6 +27,13 @@ let currentQuestionIndex = 0;
 let remainingTime = questions.length * 10;
 let timerId;
 
+//SOUND EFFECTS
+const correctSound = document.createElement("audio");
+correctSound.setAttribute("src", "./assets/sfx/correct.wav");
+
+const wrongSound = document.createElement("audio");
+wrongSound.setAttribute("src", "./assets/sfx/incorrect.wav");
+
 // //* A start button that when clicked a timer starts and the first question appears
 function startQuiz() {
   timerId = setInterval(quizTimer, 1000);
@@ -66,6 +73,10 @@ function answerClick() {
 
     //show feedback that answer is wrong
     feedbackWrong.removeAttribute("class", "hide");
+
+    //play wrong answer sound
+    wrongSound.play();
+
     //hide feedback after 2 seconds
     setTimeout(function () {
       feedbackWrong.setAttribute("class", "hide");
@@ -74,6 +85,10 @@ function answerClick() {
     //if the answer clicked is correct show correct feedback
   } else {
     feedbackCorrect.removeAttribute("class", "hide");
+
+    //play correct answer sound
+    correctSound.play();
+
     //hide feedback after 2 seconds
     setTimeout(function () {
       feedbackCorrect.setAttribute("class", "hide");
