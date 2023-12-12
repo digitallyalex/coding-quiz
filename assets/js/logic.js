@@ -133,6 +133,9 @@ function saveScore() {
     };
     highscores.push(savedScores);
     window.localStorage.setItem("highscores", JSON.stringify(highscores));
+
+    //show confirmation message that the highscore was submitted successfully
+    alert(`Thanks! Your highscore was stored successfully!`);
   }
 }
 
